@@ -41,5 +41,37 @@ function min(arr, toReturn){
       return minElementValue;
   else if (toReturn === 'index')
       return minElementIndex;
-     
+}
+
+// https://www.codewars.com/kata/a-wolf-in-sheeps-clothing/train/javascript
+function warnTheSheep(queue) {
+  queue.reverse()
+  for (let i = 0; i < queue.length; i++) {
+    if (queue[i] === 'wolf') {
+      if (i === 0)
+        return 'Pls go away and stop eating my sheep'
+      else
+        return 'Oi! Sheep number ' + i + '! You are about to be eaten by a wolf!'
+    }
+  }
+}
+
+// https://www.codewars.com/kata/beginner-lost-without-a-map
+function maps(x){
+  const doubles = x.map((x) => x * 2);
+  return doubles
+}
+
+// https://www.codewars.com/kata/find-the-first-non-consecutive-number/train/javascript
+function firstNonConsecutive (arr) {
+  let myArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    myArr.push(arr[0] + i);
+    }
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] !== myArr[i]) {
+        return arr[i];
+    }
+  }
+        return null;  
 }
